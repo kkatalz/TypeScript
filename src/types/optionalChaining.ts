@@ -13,4 +13,5 @@ console.log(customer?.birthday?.getFullYear());
 
 // Optional call
 let log: any = null;
+// let log: any = (message : string ) => console.log(message);
 log?.('a'); //if log is refencing an actual function, the 'a' parameter is valid. otherwise, we will get undefined.
