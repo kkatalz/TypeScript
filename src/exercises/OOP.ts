@@ -17,3 +17,10 @@ class MyPerson {
     return `${this.firstName} ${this.lastName}`;
   }
 }
+
+// Create a new class called Employee that extends Person and adds a new property called salary.
+class Employee extends MyPerson {
+  constructor(public salary: number, firstName: string, lastName: string) {
+    super(firstName, lastName);
+  }
+}
