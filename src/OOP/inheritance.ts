@@ -5,7 +5,7 @@ class Person {
         return this.firstName + ' ' + this.lastName;
     }
 
-    walk(){
+    protected walk(){ // used only within the class + can be inherited 
         console.log("walking");
     }
 }
@@ -25,5 +25,12 @@ class Teacher extends Person{
     }
 }
 
-let teacher = new Teacher('John', 'Smith');
-console.log(teacher.fullName);
+printNames([
+    new Student(1, 'John', 'Smith'),
+    new Teacher('Mosh', 'hamedani')
+])
+
+function printNames(people : Person[]){
+    for (let person of people)
+        console.log(person.fullName);
+}
