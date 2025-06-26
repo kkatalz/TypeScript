@@ -19,4 +19,11 @@ class Student extends Person {
     }
 }
 
-let student = new Student (1, 'Zlata', 'karbovska');
+class Teacher extends Person{
+    override get fullName(){
+        return 'Professor ' + super.fullName;
+    }
+}
+
+let teacher = new Teacher('John', 'Smith');
+console.log(teacher.fullName);
