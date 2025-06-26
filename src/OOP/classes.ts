@@ -1,7 +1,8 @@
-class Acount {
-    id: number;
+class Account {
+    readonly id: number;
     owner: string;
     balance : number;
+    nickname?: string;
 
     constructor(id: number, owner : string, balance : number){
         this.id = id;
@@ -15,3 +16,7 @@ class Acount {
         this.balance += amount;
     }
 }
+
+let account = new Account(1, 'Mosh', 0)
+account.deposit(100);
+console.log(account);
