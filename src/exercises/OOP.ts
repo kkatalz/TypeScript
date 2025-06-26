@@ -24,3 +24,22 @@ class Employee extends MyPerson {
     super(firstName, lastName);
   }
 }
+
+// Given the data below, define an interface for representing employees:
+let myEmployee = {
+  name: "John Smith",
+  salary: 50_000,
+  address: { street: "Flinders st", city: "Melbourne", zipCode: 3144 },
+};
+
+interface Address {
+  street: string;
+  city: string;
+  zipCode: number;
+}
+
+interface MyEmployee extends Address {
+  name: string;
+  salary: number;
+  address: Address;
+}
